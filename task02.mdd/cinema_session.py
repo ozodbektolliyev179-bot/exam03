@@ -6,7 +6,6 @@ class CinemaSession:
     def __init__(self, movie_title: str, total_seats: int):
        if not isinstance(movie_title, str) or not movie_title.strip():
             raise ValueError("fayil nomi bo'sh bo'lmasligi kerak") 
-       if not isinstance(total_seats, int) or total_seats <= 0:
             raise ValueError("jami o'rinlar musbat butun son bo'lishi kerak")
 
 
