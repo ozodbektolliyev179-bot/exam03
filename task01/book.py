@@ -63,7 +63,7 @@ class Book:
             "pages": self.pages,
             "status": status,
             "borrower": self.borrower,
-            "times_borrowed": len(self.borrow_history)
+            "times_borrowed": len(self.borrow_history),
         }
 
     def __str__(self):

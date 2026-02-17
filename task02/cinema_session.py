@@ -1,6 +1,7 @@
 from seat import Seat
 from ticket import Ticket
 
+
 class CinemaSession:
     def __init__(self, movie_title: str, total_seats: int):
         if not isinstance(movie_title, str) or not movie_title.strip():

@@ -1,5 +1,3 @@
-
-
 class Ticket:
     def __init__(self, seat, user):
         self.seat = seat
