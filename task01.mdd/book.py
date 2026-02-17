@@ -1,5 +1,6 @@
 from datetime import datetime
 
+
 class Book:
     def __init__(self, id: int, title: str, author: str, pages: int):
         if not isinstance(id, int) or id <= 0:
@@ -81,3 +82,16 @@ class Book:
 
     def __bool__(self):
         return not self.archived
+
+
+if __name__ == "__main__":
+    book = Book(1, "Python", "Ali", 300)
+
+    print(book)
+    print(book.info())
+
+    book.borrow("Vali")
+    print(book.info())
+
+    book.return_book()
+    print(book.info())
