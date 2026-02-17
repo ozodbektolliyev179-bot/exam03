@@ -1,7 +1,8 @@
-class Seat:
-    def ___init__(self, number: int):
-        if not isinstance(number, int) or number <= 0:
-            raise ValueError("number musbat butun son bo'lishi kerak")
 
+class Seat:
+    def __init__(self, number: int):
         self.number = number
-        self.is_taken = False
+        self.is_taken = False   # Bu bo‘sh/band holatini saqlaydi
+
+    def __str__(self):
+        return f"Seat {self.number}: {'X' if self.is_taken else 'O'}"

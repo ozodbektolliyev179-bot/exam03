@@ -1,13 +1,9 @@
-from seat import Seat
 
 
 class Ticket:
-    def __init__(self, seat: Seat, owner: str):
-        if not isinstance(seat, Seat):
-            raise ValueError("seat Seat tipida bo'lishi kerak")
-        if not isinstance(owner, str) or not owner.strip():
-            raise ValueError("owner bo'sh bo'lmasligi kerak")
-
+    def __init__(self, seat, user):
         self.seat = seat
-        self.owner = owner
-        
+        self.user = user
+
+    def __str__(self):
+        return f"{self.user} -> Seat {self.seat.number}"
